@@ -1,1 +1,1 @@
-# kube-operators
+# Bootstrap dev for docker
