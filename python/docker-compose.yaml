@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pydev:
+    image: pydev
+    ports:
+    - "82:3000"
+    volumes:
+    - ./:/app
