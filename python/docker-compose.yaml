@@ -1,7 +1,11 @@
 version: '3'
 services:
   pydev:
-    image: pydev
+    build:
+      context: .
+      args:
+        - https_proxy=${proxy}
+        - http_proxy=${proxy}
     ports:
     - "82:3000"
     volumes:

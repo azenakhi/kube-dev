@@ -1,9 +1,13 @@
 version: '3'
 services:
   jsdev:
-    image: jsdev
+    build:
+      context: .
+      args:
+        - https_proxy=${proxy}
+        - http_proxy=${proxy}
     ports:
     - "81:3000"
     volumes:
     - ./:/app
-    
+    - /app/node_modules
